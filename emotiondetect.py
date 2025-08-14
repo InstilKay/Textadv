@@ -38,7 +38,7 @@ from pathlib import Path
 # -----------------------------
 
 DATA_DIR = Path(__file__).parent / "data"
-DIALOGUES_JSON = DATA_DIR / "dialogues.json"
+DIALOGUES_JSON = "dialogues.json"
 
 
 # Canonical emotion set (7 classes)
@@ -421,7 +421,7 @@ def run_app():
                 st.bar_chart(pd.Series(probs, index=EMOTIONS))
 
     # Final caption with icon (JPEG)
-    icon_path = DATA_DIR / "2.jpg"  # Sabi
+    icon_path ="2.jpg"  # Sabi
     ICON_SIZE = 96
 
     col_i, col_t = st.columns([3, 20])
@@ -431,7 +431,7 @@ def run_app():
         except Exception:
             st.write("")  # ignore if missing
     with col_t:
-        st.caption("hallelujah!!! 🙌🙌🙌.")
+        st.caption("Yes Group7!!! 🙌🙌🙌.")
 
 
 
